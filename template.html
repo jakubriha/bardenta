@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>${title}</title>
+  <meta name="description" content="${description}">
+  <meta name="author" content="Jakub Riha">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="photoswipe/photoswipe.css">
+  <link rel="stylesheet" href="photoswipe/default-skin/default-skin.css">
+  <script src="photoswipe/photoswipe.min.js"></script>
+  <script src="photoswipe/photoswipe-ui-default.min.js"></script>
+</head>
+
+<body>
+  <div class="header">
+    <div class="centered">
+      <div class="language">
+        <a href="index.html">CZ</a> | <a href="en.html">EN</a>
+      </div>
+      <div class="title">
+        <h1>Bardenta</h1>
+        <p>${dental_office}</p>
+      </div>
+      <div class="contacts">
+        <div><a href="#" class="cryptedmail" data-name="bardenta" data-domain="centrum" data-tld="cz"
+            onclick="window.location.href = 'mailto:' + this.dataset.name + '@' + this.dataset.domain + '.' + this.dataset.tld; return false;"></a>
+        </div>
+        <div>(+420)&nbsp;607&nbsp;576&nbsp;663</div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="centered">
+      <h3>${header_about_us}</h3>
+      ${header_about_us_text}
+      <h3 class="updates-header">${header_whats_new}</h3>
+      <div class="updates">
+        ${header_whats_new_text}
+      </div>
+      <h3>${galerry}</h3>
+      <div class="galerry">
+        <div>
+          <a href="galerry/01.jpg" data-size="2048x1396" data-index="0" onclick="showPhoto(this);return false;"><img src="galerry/01.jpg" /></a>
+          <a href="galerry/02.jpg" data-size="1988x2048" data-index="1" onclick="showPhoto(this);return false;"><img src="galerry/02.jpg" /></a>
+        </div>
+      </div>
+      <h3>${header_our_services}</h3>
+      <div class="services">
+        <div>
+          <h4>${prevention}</h4>
+          <p>${prevention_text}</p>
+        </div>
+        <div>
+          <h4>${header_dental_hygiene}</h4>
+          <p>${header_dental_hygiene_text}</p>
+        </div>
+        <div>
+          <h4>${restorative_and_aesthetic_dentistry}</h4>
+          <p>${restorative_and_aesthetic_dentistry_text}</p>
+        </div>
+        <div>
+          <h4>${pediatric_dentistry}</h4>
+          <p>${pediatric_dentistry_text}</p>
+        </div>
+        <div>
+          <h4>${prosthetic_dentistry}</h4>
+          <p>${prosthetic_dentistry_text}</p>
+        </div>
+        <div>
+          <h4>${dental_surgery}</h4>
+          <p>${dental_surgery_text}</p>
+        </div>
+      </div>
+      <div class="rest">
+        <div>
+          <h3>${our_team}</h3>
+          <p>${dentist}<br />MDDr. Filip Bartoš</p>
+          <h3>${opening_hours}</h3>
+          <p>${mon_tue_wed}<br />8:00–16:00</p>
+          <p>${thursday}<br />10:30–18:00</p>
+          <p>${friday}<br />8:00–12:00</p>
+        </div>
+        <div>
+          <h3>${contact}</h3>
+          <p>${dental_surgery_bardenta}<br /><a href="https://goo.gl/maps/FAdTSA9zyHSuB3Ax6" target="_blank">Janouškova
+              579/4, 613&nbsp;00, Brno-Černá pole</a></p>
+          <table>
+            <tr>
+              <td class="tel">Tel.:</td>
+              <td>(+420)&nbsp;607&nbsp;576&nbsp;663</td>
+            </tr>
+            <tr>
+              <td class="email">Email:</td>
+              <td><a href="#" class="cryptedmail" data-name="bardenta" data-domain="centrum" data-tld="cz"
+                  onclick="window.location.href = 'mailto:' + this.dataset.name + '@' + this.dataset.domain + '.' + this.dataset.tld; return false;"></a>
+              </td>
+            </tr>
+          </table>
+
+          <h3>${transport}</h3>
+          <p>${parking_info}</p>
+          ${public_transport_info}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="centered">
+      <p>${dental_surgery_bardenta}</p>
+      <p>${created_by} <a href="https://www.linkedin.com/in/jakub-riha/" target="_blank">Jakub Říha</a>.</p>
+    </div>
+  </div>
+
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+      <div class="pswp__ui pswp__ui--hidden">
+        <div class="pswp__top-bar">
+          <div class="pswp__counter"></div>
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+        </button>
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+        </button>
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="photoswipe/integration.js"></script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: "Arial Bold", sans-serif;
+  line-height: 1.6;
+}
+
+h1 {
+  
+  text-transform: uppercase;
+  font-size: 2.6em;
+  margin-bottom: 0;
+}
+
+h3 {
+  margin-bottom: .7em;
+  font-size: 2.2em;
+}
+
+h4 {
+  font-size: 1.3em;
+  margin: 0;
+}
+
+.header {
+  background: no-repeat center url("images/background.jpg");
+  background-size: cover;
+  color: white;
+  padding: 1em;
+}
+
+.centered {
+  max-width: 50em;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.header > .centered > .language {
+  text-align: right;
+  font-size: 1.2em;
+  
+}
+
+.header > .centered > .title {
+  background: no-repeat url("images/logo.svg");
+  padding-left: 5em;
+}
+
+@media only screen and (max-width: 380px) {
+  
+  .header > .centered {
+    background: no-repeat  url("images/logo.svg");
+    background-size: 3.5em;
+  }
+  
+  .header > .centered > .title {
+    background: none;
+    padding-left: 0;
+  }
+}
+
+.header > .centered > .title > p {
+  margin-top: -0.5em;
+  font-size: 1.3em;
+}
+
+.header > .centered > .contacts {
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.header > .centered > .contacts > div {
+  padding-left: 2em;
+}
+
+.header > .centered > .contacts > div:first-child {
+  background: no-repeat url("images/email-white.svg");
+}
+
+.header > .centered > .contacts > div:last-child {
+  margin-left: 1.3em;
+  background: no-repeat url("images/phone-white.svg");
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+}
+
+.content {
+  background-color: white;
+  flex-grow: 1;
+  color: #514036;
+  padding: 1em;
+}
+
+.content a {
+  color: #514036;
+}
+
+.content a:hover {
+  background-color: #eae8e1;
+}
+
+.content > .centered > .updates {
+  padding-left: 2.5em;
+  background: no-repeat url("images/exclamation-mark.svg");
+  background-size: auto 4em;
+}
+
+.content > .centered > .updates-header {
+  margin-bottom: 1em;
+}
+
+.content > .centered > .galerry {
+  width: 100%;
+  padding-top: 35%;
+  position: relative
+}
+
+.content > .centered > .galerry > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.content > .centered > .galerry > div > a > img {
+  height: 100%;
+}
+
+.content > .centered > .services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: -1em;
+  margin-right: -1em;
+}
+
+.content > .centered > .services > div {
+  color: white;
+  background-color: #ada88d;
+  padding: 1em;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0px;
+  margin: 1em 1em 0 0;
+  min-width: 10em;
+}
+
+@media only screen and (max-width: 400px) {
+
+  .content > .centered > .services > div {
+    margin-top: 0;
+  }
+}
+
+.content > .centered > .services p {
+  margin-bottom: 0; 
+}
+
+.content > .centered > .rest {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.content > .centered > .rest > div {
+  margin-right: 2em;
+}
+
+.content > .centered > .rest table .tel {
+  padding-left: 2em;
+  background: no-repeat url("images/phone-brown.svg");
+  background-size: 35%;
+}
+
+.content > .centered > .rest table .email {
+  padding-left: 2em;
+  background: no-repeat url("images/email-brown.svg");
+  background-size: 32%;
+}
+
+.cryptedmail:after {
+  content: attr(data-name) "@" attr(data-domain) "." attr(data-tld); 
+}
+
+.footer {
+  background-color: #514036;
+  color: white;
+}
+
+.footer a {
+  color: white;
+}
+
+.footer > .centered {
+  padding: .5em 1em;
+}
+
+.footer > .centered > p {
+  line-height: 1.2;
+}
