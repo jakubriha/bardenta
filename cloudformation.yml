@@ -77,14 +77,12 @@ Resources:
             - GET
             - HEAD
           Compress: true
-          # DefaultTTL: 86400
-          DefaultTTL: 300
+          DefaultTTL: 21600
           ForwardedValues:
             Cookies:
               Forward: none
             QueryString: true
-          # MaxTTL: 31536000
-          MaxTTL: 300
+          MaxTTL: 21600
           SmoothStreaming: false
           TargetOriginId: !Sub 'S3-${AWS::StackName}-root'
           ViewerProtocolPolicy: 'redirect-to-https'
