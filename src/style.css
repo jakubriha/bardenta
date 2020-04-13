@@ -117,22 +117,38 @@ h4 {
   margin-bottom: 1em;
 }
 
-.content > .centered > .galerry {
-  width: 100%;
-  padding-top: 35%;
-  position: relative
+.content > .centered > .gallery {
+  display: flex;
+  flex-flow: row nowrap;
 }
 
-.content > .centered > .galerry > div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+.content > .centered > .gallery > a {
+  flex: 0 0 33%;
+  display: block;
 }
 
-.content > .centered > .galerry > div > a > img {
+.content > .centered > .gallery > a:hover {
+  background-color: transparent;
+}
+
+.content > .centered > .gallery > a > img {
+  flex: 0 0 33%;
+  max-width: 100%;
   height: 100%;
+  box-sizing: border-box;
+}
+
+.content > .centered > .gallery > div > a > img {
+  height: 100%;
+}
+
+.content > .centered > .gallery > a:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #ada88d;
+  text-decoration: none;
 }
 
 .content > .centered > .services {

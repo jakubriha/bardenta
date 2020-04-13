@@ -1,16 +1,28 @@
 
-var photos = Array.from(document.querySelectorAll('.galerry a'));
+var photos = Array.from(document.querySelectorAll('.gallery a'));
 
-var photoswipeArray = photos.map(function(photo) {
-
-  var size = photo.attributes["data-size"].value.split('x');
-
-  return {
-    src: photo.attributes["href"].value,
-    w: parseInt(size[0]),
-    h: parseInt(size[1])
-  };
-});
+var photoswipeArray = [
+  {
+    src: "gallery/01.jpg",
+    w: 2048,
+    h: 1396
+  },
+  {
+    src: "gallery/02.jpg",
+    w: 2048,
+    h: 1536
+  },
+  {
+    src: "gallery/03.jpg",
+    w: 2048,
+    h: 1536
+  },
+  {
+    src: "gallery/04.jpg",
+    w: 1536,
+    h: 2048
+  }
+];
 
 var pswpElement = document.querySelectorAll('.pswp')[0];
 
