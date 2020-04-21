@@ -20,22 +20,12 @@ Parameters:
 
 Resources:
 
-  S3BucketLogs:
-    Type: AWS::S3::Bucket
-    DeletionPolicy: Delete
-    Properties:
-      AccessControl: LogDeliveryWrite
-      BucketName: !Sub '${AWS::StackName}-logs'
-
   S3BucketRoot:
     Type: AWS::S3::Bucket
     DeletionPolicy: Delete
     Properties:
       AccessControl: PublicRead
       BucketName: !Sub '${AWS::StackName}-root'
-      LoggingConfiguration:
-        DestinationBucketName: !Ref S3BucketLogs
-        LogFilePrefix: 'cdn/'
       WebsiteConfiguration:
         ErrorDocument: '404.html'
         IndexDocument: 'index.html'
@@ -90,10 +80,6 @@ Resources:
         Enabled: true
         HttpVersion: 'http2'
         IPV6Enabled: true
-        Logging:
-          Bucket: !GetAtt S3BucketLogs.DomainName
-          IncludeCookies: false
-          Prefix: 'cdn/'
         Origins:
           - CustomOriginConfig:
               OriginProtocolPolicy: 'https-only'
