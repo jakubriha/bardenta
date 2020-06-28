@@ -20,9 +20,11 @@ Parameters:
 
 Resources:
 
+  # Site hosting
+
   S3BucketRoot:
     Type: AWS::S3::Bucket
-    DeletionPolicy: Delete
+    DeletionPolicy: Retain
     Properties:
       AccessControl: PublicRead
       BucketName: !Sub '${AWS::StackName}-root'
