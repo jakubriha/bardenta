@@ -16,7 +16,7 @@ var photoswipeArray = [
     src: "gallery/03.jpg",
     w: 960,
     h: 720
-  }g
+  }
 ];
 
 var pswpElement = document.querySelectorAll('.pswp')[0];
