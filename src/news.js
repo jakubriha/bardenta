@@ -13,7 +13,7 @@ function processNews(news) {
       .join("");
   }
 
-  document.getElementsByClassName("updates")[0].innerHTML = html;
+  document.getElementsByClassName("news")[0].innerHTML = html;
 }
 
 function isInEnglish() {
@@ -23,7 +23,7 @@ function isInEnglish() {
 function failNews() {
   var text = "<div>" + (isInEnglish() ? "Error occured. Please, try to refresh the page." : "Došlo k chybě. Prosím, zkuste obnovit stránku.") + "</div>";
 
-  document.getElementsByClassName("updates")[0].innerHTML = text;
+  document.getElementsByClassName("news")[0].innerHTML = text;
 }
 
 function parseDate(newsItem) {
