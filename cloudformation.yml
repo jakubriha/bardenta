@@ -92,3 +92,32 @@ Resources:
           AcmCertificateArn: !Ref CertificateManagerCertificate
           MinimumProtocolVersion: TLSv1.1_2016
           SslSupportMethod: sni-only
+
+  # News
+
+  NewsBucket:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Delete
+    Properties:
+      AccessControl: PublicRead
+      BucketName: !Sub '${AWS::StackName}-news'
+      CorsConfiguration:
+        CorsRules:
+          - AllowedHeaders:
+              - "*"
+            AllowedMethods:
+              - GET
+            AllowedOrigins:
+              - "*"
+
+  NewsBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref NewsBucket
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: 'Allow'
+            Action: 's3:GetObject'
+            Principal: '*'
+            Resource: !Sub '${NewsBucket.Arn}/*'
