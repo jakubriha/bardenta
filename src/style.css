@@ -112,6 +112,14 @@ h4 {
   border-left: 0.2em solid #514036;
 }
 
+.content > .centered > .updates > div {
+  margin: 1.3em 0;
+}
+
+.content > .centered > .updates > div > div:first-child {
+  font-size: 80%;
+}
+
 .content > .centered > .updates-header {
   margin-bottom: 1em;
 }
