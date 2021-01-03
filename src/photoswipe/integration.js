@@ -21,6 +21,11 @@ var photoswipeArray = [
     src: "gallery/04.jpg",
     w: 720,
     h: 540
+  },
+  {
+    src: "gallery/05.jpg",
+    w: 1600,
+    h: 1200
   }
 ];
 
