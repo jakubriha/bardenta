@@ -2,7 +2,7 @@
 
 import csv
 
-with open('template.html', 'r') as htmlreader, open('src/index.html', 'w') as page_cz, open('src/en.html', 'w') as page_en, open('translations.csv', newline='') as csvreader:
+with open('template.html', 'r') as htmlreader, open('src/cz.html', 'w') as page_cz, open('src/en.html', 'w') as page_en, open('translations.csv', newline='') as csvreader:
   
   template = htmlreader.read()
 
@@ -24,5 +24,5 @@ with open('template.html', 'r') as htmlreader, open('src/index.html', 'w') as pa
 
 print('The following pages were succesfully generated:')
 print('')
+print('  src/cz.html')
 print('  src/en.html')
-print('  src/index.html')
