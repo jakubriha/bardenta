@@ -25,137 +25,148 @@ h4 {
   margin: 0;
 }
 
-.header {
+header, main, footer {
+  display: flex;
+  justify-content: center;
+}
+
+header > div, main > div, footer > div {
+  max-width: 50em;
+  margin: 0 1em ;
+  height: 100%;
+  width: 100%;
+}
+
+header {
   background: no-repeat center url("images/background.jpg");
   background-size: cover;
   color: white;
   padding: 1em;
 }
 
-.centered {
+/* div {
   max-width: 50em;
-  margin: 0 auto;
+  margin: 0 1em ;
   height: 100%;
-}
+  width: 100%;
+} */
 
-.header > .centered > .language {
+header > div > .language {
   text-align: right;
   font-size: 1.2em;
 }
 
-.header > .centered > .language > a {
+header > div > .language > a {
   background: left center/1.7em no-repeat;
   padding-left: 2.2em;
   text-transform: uppercase;
 }
 
-.header > .centered > .title {
+header > div > .title {
   background: no-repeat url("images/logo.svg");
   padding-left: 5em;
 }
 
 @media only screen and (max-width: 380px) {
   
-  .header > .centered {
+  header > div {
     background: no-repeat  url("images/logo.svg");
     background-size: 3.5em;
   }
   
-  .header > .centered > .title {
+  header > div > .title {
     background: none;
     padding-left: 0;
   }
 }
 
-.header > .centered > .title > p {
+header > div > .title > p {
   margin-top: -0.5em;
   font-size: 1.3em;
 }
 
-.header > .centered > .contacts {
+header > div > .contacts {
   text-align: right;
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
 }
 
-.header > .centered > .contacts > div {
+header > div > .contacts > div {
   padding-left: 2em;
 }
 
-.header > .centered > .contacts > div:first-child {
+header > div > .contacts > div:first-child {
   background: no-repeat url("images/email-white.svg");
 }
 
-.header > .centered > .contacts > div:last-child {
+header > div > .contacts > div:last-child {
   margin-left: 1.3em;
   background: no-repeat url("images/phone-white.svg");
 }
 
-.header a {
+header a {
   color: white;
   text-decoration: none;
 }
 
-.content {
+main {
   background-color: white;
-  flex-grow: 1;
-  color: #514036;
-  padding: 1em;
-}
-
-.content a {
   color: #514036;
 }
 
-.content a:hover {
+main a {
+  color: #514036;
+}
+
+main a:hover {
   background-color: #eae8e1;
 }
 
-.content > .centered > .updates > .news {
+main > div > .updates > .news {
   padding-left: 1.5em;
   border-left: 0.2em solid #514036;
   margin: 1.3em 0;
 }
 
-.content > .centered > .updates > .news > div {
+main > div > .updates > .news > div {
   margin: 1.3em 0;
 }
 
-.content > .centered > .updates > .news > div > div:first-child {
+main > div > .updates > .news > div > div:first-child {
   font-size: 80%;
 }
 
-.content > .centered > .updates-header {
+main > div > .updates-header {
   margin-bottom: 1em;
 }
 
-.content > .centered > .gallery {
+main > div > .gallery {
   display: flex;
   flex-flow: row nowrap;
 }
 
-.content > .centered > .gallery > a {
+main > div > .gallery > a {
   flex: 1 0;
   display: block;
 }
 
-.content > .centered > .gallery > a:hover {
+main > div > .gallery > a:hover {
   background-color: transparent;
 }
 
-.content > .centered > .gallery > a > img {
+main > div > .gallery > a > img {
   flex: 0 0 33%;
   max-width: 100%;
   height: 100%;
   box-sizing: border-box;
 }
 
-.content > .centered > .gallery > div > a > img {
+main > div > .gallery > div > a > img {
   height: 100%;
 }
 
-.content > .centered > .gallery > a:last-child {
+main > div > .gallery > a:last-child {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -164,7 +175,7 @@ h4 {
   text-decoration: none;
 }
 
-.content > .centered > .services {
+main > div > .services {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -172,7 +183,7 @@ h4 {
   margin-right: -1em;
 }
 
-.content > .centered > .services > div {
+main > div > .services > div {
   color: white;
   background-color: #ada88d;
   padding: 1em;
@@ -185,40 +196,41 @@ h4 {
 
 @media only screen and (max-width: 400px) {
 
-  .content > .centered > .services > div {
+  main > div > .services > div {
     margin-top: 0;
   }
 }
 
-.content > .centered > .services p {
+main > div > .services p {
   margin-bottom: 0; 
 }
 
-.content > .centered > .rest {
+main > div > .rest {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 1em;
 }
 
-.content > .centered > .rest > div {
+main > div > .rest > div {
   margin-right: 2em;
 }
 
-.content > .centered > .rest > div:first-child {
+main > div > .rest > div:first-child {
   max-width: 20em;
 }
 
-.content > .centered > .rest > div:last-child {
+main > div > .rest > div:last-child {
   max-width: 25em;
 }
 
-.content > .centered > .rest table .tel {
+main > div > .rest table .tel {
   padding-left: 2em;
   background: no-repeat url("images/phone-brown.svg");
   background-size: 35%;
 }
 
-.content > .centered > .rest table .email {
+main > div > .rest table .email {
   padding-left: 2em;
   background: no-repeat url("images/email-brown.svg");
   background-size: 32%;
@@ -228,26 +240,27 @@ h4 {
   content: attr(data-name) "@" attr(data-domain) "." attr(data-tld); 
 }
 
-.footer {
+footer {
   background-color: #514036;
   color: white;
 }
 
-.footer a {
+footer a {
   color: white;
 }
 
-.footer > .centered {
-  padding: 1em;
+footer > div {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
-.footer > .centered > div:first-child {
+footer > div > div {
+  /* margin: 1em 0; */
+}
+
+footer > div > div:first-child {
   margin-right: 2em;
 }
-
-/* .footer > .centered > p {
-  line-height: 1.2;
-} */

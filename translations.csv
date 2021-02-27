@@ -1,7 +1,6 @@
 key;cz;en
 access;Vstup přes recepci horního vchodu z ulice Janouškova.;Entry through the reception of the upper entrance from Janouskova street.
 contact;Kontakt;Contact
-created_by;Vytvořil;Created by
 dental_nurse;Zubní instrumentářka;Dental nurse
 dental_office;Zubní ordinace;Dental office
 dental_surgery_bardenta;Zubní ordinace BARDENTA s.r.o.;Dental surgery BARDENTA s.r.o.
@@ -9,6 +8,7 @@ dental_surgery_text;Provádíme běžné chirurgické výkony.;We perform common
 dental_surgery;Stomatochirurgie;Dental surgery
 dentist;Zubní lékař;Dentist
 description;BARDENTA zubní ordinace v Brně-Černých polích;BARDENTA dental office in Brno-Černá pole
+designed_by;Vytvořil;Designed by
 friday;Pátek;Friday
 gallery_next;Další;Next
 gallery;Galerie;Gallery
